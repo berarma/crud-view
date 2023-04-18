@@ -119,7 +119,7 @@ class ViewSearchListener extends BaseListener
                 $input['type'] = 'select';
             }
 
-            if (!empty($input['options'])) {
+            if ($input['type'] === 'select') {
                 $input['empty'] = true;
                 if (empty($input['class']) && !$config['select2']) {
                     $input['class'] = 'no-select2';
